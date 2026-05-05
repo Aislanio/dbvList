@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking Gamificado DBV</title>
+
+    <!-- Meta Tags para Redes Sociais (Open Graph / WhatsApp) -->
+    <meta property="og:title" content="Ranking Gamificado DBV - Rumo ao Campori 2027">
+    <meta property="og:description" content="Acompanhe o saldo da nossa unidade! Veja quem está na liderança e quanto falta para as metas de Ônibus e Alimentação.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1537225228614-56cc3556d7ed?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#4f46e5">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* ==========================================
@@ -325,7 +334,7 @@
                     wrapperEl.id = `dbv-wrapper-${dbv.id}`;
                     wrapperEl.className = 'ranking-item-wrapper';
                     
-                    // Lógica do Badge: se monthlyGoal for 0, mostra como "Em dia" se pagou algo ou "Aguardando" se 0
+                    // Lógica do Badge
                     const statusText = dbv.currentMonthDeposited > 0 ? "Em dia" : (dbv.monthlyGoal === 0 ? "Aguardando" : "Pendente");
                     const statusColor = dbv.currentMonthDeposited > 0 ? "emerald" : "rose";
 
